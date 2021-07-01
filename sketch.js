@@ -36,7 +36,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(600, 200);
+  createCanvas(1000, 400);
 
   var message = "This is a message";
  console.log(message)
@@ -48,7 +48,7 @@ function setup() {
 
   trex.scale = 0.5;
   
-  ground = createSprite(200,180,400,20);
+  ground = createSprite(600,180,1200,20);
   ground.addImage("ground",groundImage);
   ground.x = ground.width /2;
   
@@ -169,7 +169,8 @@ score=0
 
 function spawnObstacles(){
  if (frameCount % 60 === 0){
-   var obstacle = createSprite( trex.x=camera.position.x-600,165,10,40);
+
+   var obstacle = createSprite(camera.position.x+600,165,10,40);
    obstacle.velocityX = -(6 + score/100);
    
     //generate random obstacles
